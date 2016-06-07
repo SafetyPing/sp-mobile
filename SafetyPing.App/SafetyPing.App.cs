@@ -6,9 +6,9 @@ using System.Text;
 using Xamarin.Forms;
 
 namespace SafetyPing.App {
-	public class SafetyPing.App : ContentPage
+	public class SafetyPingApp : ContentPage
 	{
-		public SafetyPing.App ()
+		public SafetyPingApp ()
 		{
 			var button = new Button {
 				Text = "Click Me!",
@@ -16,8 +16,8 @@ namespace SafetyPing.App {
 				HorizontalOptions = LayoutOptions.CenterAndExpand,
 			};
 
-	int clicked = 0;
-	button.Clicked += (s, e) => button.Text = "Clicked: " + clicked++;
+			int clicked = 0;
+			button.Clicked += (s, e) => button.Text = "Clicked: " + clicked++;
 
 			Content = button;
 		}
