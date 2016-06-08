@@ -1,5 +1,6 @@
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
+using SafetyPing.App.ViewModels;
 
 namespace SafetyPing.IOS.Views
 {
@@ -13,7 +14,7 @@ namespace SafetyPing.IOS.Views
         {
             base.ViewDidLoad();
 
-            var set = this.CreateBindingSet<FirstView, Core.ViewModels.FirstViewModel>();
+            var set = this.CreateBindingSet<FirstView, FirstViewModel>();
             set.Bind(Label).To(vm => vm.Hello);
             set.Bind(TextField).To(vm => vm.Hello);
             set.Apply();

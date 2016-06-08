@@ -20,7 +20,7 @@ namespace SafetyPing.IOS
 
         protected override IMvxApplication CreateApp()
         {
-            return new Core.App();
+            return new SafetyPing.App.App();
         }
         
         protected override IMvxTrace CreateDebugTrace()
