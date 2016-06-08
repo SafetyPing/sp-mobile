@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Microsoft.Practices.Unity;
 using SafetyPing.App.Services;
+using SafetyPing.App.Services.Location;
 
 namespace SafetyPing.Android.Services {
 	public class AndroidAppContext : IAppContext {
@@ -25,7 +26,8 @@ namespace SafetyPing.Android.Services {
 		public void RegisterServices(UnityContainer container)
 		{
 			container
-				.RegisterType<ITelephonyService, TelephonyService>()
+				.RegisterType<ITelephonyService, AndroidTelephonyService>()
+				.RegisterType<ILocationService, AndroidLocationService>()
 			;
 		}
 	}

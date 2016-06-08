@@ -1,21 +1,22 @@
-﻿using System;
 using Android.App;
+using Android.OS;
+using MvvmCross.Droid.Views;
+using System;
 using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.OS;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.V4.Widget;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
+using MvvmCross.Droid.Support.V7.AppCompat;
+using SafetyPing.App.ViewModels;
 
-namespace SafetyPing.Android {
-	[Activity(Label = "SafetyPing.Android", MainLauncher = false, Icon = "@drawable/icon")]
-	public class MainActivity : AppCompatActivity {
+namespace SafetyPing.Android.Views {
+	[Activity(Label = "View for FirstViewModel")]
+	public class FirstView : MvxAppCompatActivity<FirstViewModel> {
 		int count = 1;
-
-
 		Toolbar _supporttoolbar;
 		DrawerLayout _drawer;
 		NavigationView _navigationview;
@@ -26,7 +27,6 @@ namespace SafetyPing.Android {
 
 			// Set our view from the "main" layout resource
 			SetContentView(Resource.Layout.Main);
-
 			_supporttoolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
 			_supporttoolbar.SetTitle(Resource.String.ApplicationName);
 			SetSupportActionBar(_supporttoolbar);
@@ -45,8 +45,6 @@ namespace SafetyPing.Android {
 
 				}
 			};
-			
 		}
 	}
 }
-

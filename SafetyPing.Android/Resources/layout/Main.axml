@@ -12,6 +12,23 @@
         <include
             android:id="@+id/toolbar"
             layout="@layout/toolbar" />
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:MvxBind="Text Hello; Visible Location" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome!" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 <!-- drawer -->
     <android.support.design.widget.NavigationView

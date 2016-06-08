@@ -13,7 +13,7 @@ using SafetyPing.App.Services;
 using Android.Telephony;
 
 namespace SafetyPing.Android.Services {
-	public class TelephonyService : PhoneStateListener, ITelephonyService {
+	public class AndroidTelephonyService : PhoneStateListener, ITelephonyService {
 		public event EventHandler<Call> EmergencyCallStarted;
 
 		public void Start(IAppContext genericContext)
