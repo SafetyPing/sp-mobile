@@ -2,3 +2,5 @@
 obj
 bin
 packages
+/SafetyPing.Android/Keys/Keys.cs
+*.user
